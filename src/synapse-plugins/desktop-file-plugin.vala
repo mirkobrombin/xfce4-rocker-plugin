@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2010 Michal Hruby <michal.mhr@gmail.com>
+ * Copyright (C) 2020 Mirko Brombin <send@mirko.pm>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

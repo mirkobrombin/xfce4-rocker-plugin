@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 //
-//  Copyright (C) 2011-2012 Rocker Developers
+//  Copyright (C) 2020 Mirko Brombin <send@mirko.pm>
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
