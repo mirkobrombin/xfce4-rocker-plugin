@@ -1,7 +1,0 @@
-*~
-build/
-rpm/
-.vscode/
-cmake/
-po/
-subprojects/
