@@ -31,7 +31,7 @@
             <description>Save the current view of the launcher.</description>
         </key>
         <key name="show-at-top" type="b">
-            <default>true</default>
+            <default>false</default>
             <summary>Show the launcher at the top</summary>
             <description>Show the launcher at the top.</description>
         </key>
