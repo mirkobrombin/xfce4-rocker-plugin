@@ -8,10 +8,11 @@ A Slingshot fork that works on Xfce without gala, granite and plank support.
 ### Dependencies 
 
 ```
-libgnome-menu-3-dev 
-libxfce4panel-2.0-dev 
-libxfce4util-dev
-libxfconf-0-dev
+libgnome-menu
+libxfce4panel
+libxfce4util
+libxfconf
+libgee
 ```
 
 ### Build and install 
