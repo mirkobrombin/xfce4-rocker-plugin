@@ -1,33 +1,41 @@
-<<<<<<< HEAD
-# rocker-launcher
+# Panther Launcher
 
-=======
+A fork of a fork originally 'Slingshot Launcher' by the elementary team
 
-# Enso OS
+Changed to work with Xfce Panel with added functionality such as being able to 'Save' items
 
-A simple OS designed for ease of use and ageing computers
+![panther](https://i.imgur.com/pIFgCJh.png)
 
-[![Join the chat at https://gitter.im/Enso-OS/Lobby](https://badges.gitter.im/Enso-OS/Lobby.svg)](https://gitter.im/Enso-OS/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+## Installing and Running 
 
-## Download
+### Dependencies 
 
-Download the latest release from SourceForge
+	libgnome-menu-3-dev 
+	libxfce4panel-2.0-dev 
+	libplank-dev
+	libxfce4util-dev
+	libxfconf-0-dev
 
-[![Download Enso OS](https://img.shields.io/sourceforge/dm/enso-os.svg)](https://sourceforge.net/projects/enso-os/files/latest/download)
+### Build and install 
 
-## Screens
+Just type from a command line:
 
-![enso](https://i.imgur.com/FKll4WZ.png)
+	mkdir build
+	cd build
+	cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+	make
+	sudo make install
+	./src/panther_launcher
 
-## Contribute 
+## Changing the location of the launcher's window
 
-Get involved, fork and send a pull request 
+It is possible to move the window to the bottom part of the screen. To do so,
+just use *dconf* to set *org.rastersoft.panther.show-at-top* to *false*.
 
-## Thank you
+## Origianl creator
 
-[EasyDevCpp](https://github.com/EasyDevCpp) - Development
+Created by Raster Software Vigo (rastersoft) 
+http://www.rastersoft.com 
+https://github.com/rastersoft/slingshot_gnome 
 
-[Malysps](https://github.com/malysps) - Testing
-
-[JonnyCodeWalker](https://github.com/JonnyCodewalker) - Testing 
->>>>>>> panther/master
+Forked for Xfce and Enso OS
