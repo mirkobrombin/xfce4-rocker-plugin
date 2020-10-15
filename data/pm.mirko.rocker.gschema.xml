@@ -21,12 +21,12 @@
             <description>This value manages the size of the fonts in Rocker. If it is zero, it will use the system value.</description>
         </key>
         <key name="show-category-filter" type="b">
-            <default>true</default>
+            <default>false</default>
             <summary>Show the category switcher or not</summary>
             <description>This value handles the category switcher.</description>
         </key>
         <key name="use-category" type="b">
-            <default>true</default>
+            <default>false</default>
             <summary>Show the category view by default</summary>
             <description>Save the current view of the launcher.</description>
         </key>
