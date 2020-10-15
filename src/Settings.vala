@@ -18,7 +18,7 @@
 
 using Posix;
 
-namespace Panther {
+namespace Rocker {
 
     public class Settings : Object {
 
@@ -36,25 +36,25 @@ namespace Panther {
         public string resolution { get; set; }
         public bool show_at_top {get; set; }
 
-        private GLib.Settings panther_settings;
+        private GLib.Settings rocker_settings;
 
         public signal void columns_changed();
         public signal void rows_changed();
         public signal void show_at_changed();
 
         public Settings () {
-            this.panther_settings = new GLib.Settings("org.rastersoft.panther");
-            this.panther_settings.bind("rows",this,"rows_int",SettingsBindFlags.DEFAULT);
-            this.panther_settings.bind("columns",this,"columns_int",SettingsBindFlags.DEFAULT);
-            this.panther_settings.bind("icon-size",this,"icon_size",SettingsBindFlags.DEFAULT);
-            this.panther_settings.bind("font-size",this,"font_size",SettingsBindFlags.DEFAULT);
-            this.panther_settings.bind("show-category-filter",this,"show_category_filter",SettingsBindFlags.DEFAULT);
-            this.panther_settings.bind("use-category",this,"use_category",SettingsBindFlags.DEFAULT);
-            this.panther_settings.bind("screen-resolution",this,"screen_resolution",SettingsBindFlags.DEFAULT);
-            this.panther_settings.bind("show-at-top",this,"show_at_top",SettingsBindFlags.DEFAULT);
-            //this.panther_settings.bind("favourite",this,"favourite",SettingsBindFlags.DEFAULT);
+            this.rocker_settings = new GLib.Settings("pm.mirko.rocker");
+            this.rocker_settings.bind("rows",this,"rows_int",SettingsBindFlags.DEFAULT);
+            this.rocker_settings.bind("columns",this,"columns_int",SettingsBindFlags.DEFAULT);
+            this.rocker_settings.bind("icon-size",this,"icon_size",SettingsBindFlags.DEFAULT);
+            this.rocker_settings.bind("font-size",this,"font_size",SettingsBindFlags.DEFAULT);
+            this.rocker_settings.bind("show-category-filter",this,"show_category_filter",SettingsBindFlags.DEFAULT);
+            this.rocker_settings.bind("use-category",this,"use_category",SettingsBindFlags.DEFAULT);
+            this.rocker_settings.bind("screen-resolution",this,"screen_resolution",SettingsBindFlags.DEFAULT);
+            this.rocker_settings.bind("show-at-top",this,"show_at_top",SettingsBindFlags.DEFAULT);
+            //this.rocker_settings.bind("favourite",this,"favourite",SettingsBindFlags.DEFAULT);
 
-            this.panther_settings.changed.connect((key) => {
+            this.rocker_settings.changed.connect((key) => {
                 if (key == "rows") {
                     this.rows = this.rows_int;
                     this.rows_changed();

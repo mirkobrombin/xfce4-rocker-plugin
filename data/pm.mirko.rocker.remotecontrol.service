@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=pm.mirko.rocker.remotecontrol
+Exec=/usr/local/bin/rocker_launcher -s

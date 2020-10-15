@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 //
-//  Copyright (C) 2012 Panther Developers
+//  Copyright (C) 2012 Rocker Developers
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -17,15 +17,15 @@
 
 using Gtk;
 
-public class Panther.DBusService : Object {
+public class Rocker.DBusService : Object {
 
     private Service? service = null;
 
-    public DBusService (PantherView view) {
+    public DBusService (RockerView view) {
         // Own bus name
         // try to register service name in session bus
         Bus.own_name (BusType.SESSION,
-                      "com.rastersoft.panther",
+                      "pm.mirko.rocker",
                       BusNameOwnerFlags.NONE,
                       (conn) => { on_bus_aquired (conn, view); },
                       name_acquired_handler,
@@ -33,11 +33,11 @@ public class Panther.DBusService : Object {
 
     }
 
-    private void on_bus_aquired (DBusConnection connection, PantherView view) {
+    private void on_bus_aquired (DBusConnection connection, RockerView view) {
         try {
             // start service and register it as dbus object
             service = new Service (view);
-            connection.register_object ("/com/rastersoft/panther", service);
+            connection.register_object ("/pm/mirko//rocker", service);
         } catch (IOError e) {
             critical ("Could not register service: %s", e.message);
             return_if_reached ();
@@ -52,7 +52,7 @@ public class Panther.DBusService : Object {
     }
 }
 
-[DBus (name = "com.rastersoft.panther")]
+[DBus (name = "pm.mirko.rocker")]
 public class Service : Object {
     public signal void visibility_changed (bool launcher_visible);
     private Gtk.Window? view = null;

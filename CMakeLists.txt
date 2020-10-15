@@ -1,4 +1,4 @@
-project (panther_launcher)
+project (rocker_launcher)
 cmake_minimum_required (VERSION 2.6)
 cmake_policy (VERSION 2.8)
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
@@ -6,7 +6,6 @@ enable_testing ()
 option(ICON_UPDATE "Update the icon cache after installing" ON)
 option(BUILD_VALADOC "Build API documentation if Valadoc is available" OFF)
 option(HAVE_ZEITGEIST "HAVE_ZEITGEIST" OFF)
-option(HAS_PLANK "HAS_PLANK" ON)
 option(DISABLE_FLASHBACK "DISABLE_FLASHBACK" ON)
 option(DISABLE_MATE "DISABLE_MATE" ON)
 
@@ -55,7 +54,6 @@ set(MODULES_TO_CHECK ${MODULES_TO_CHECK} pangocairo)
 set(MODULES_TO_CHECK ${MODULES_TO_CHECK} x11)
 set(MODULES_TO_CHECK ${MODULES_TO_CHECK} libxfce4panel-2.0)
 set(MODULES_TO_CHECK ${MODULES_TO_CHECK} libxfconf-0)
-set(MODULES_TO_CHECK ${MODULES_TO_CHECK} plank)
 
 pkg_check_modules(DEPS REQUIRED ${MODULES_TO_CHECK})
 

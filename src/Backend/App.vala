@@ -26,7 +26,7 @@ errordomain IconError {
     NOT_FOUND
 }
 
-public class Panther.Backend.App : Object {
+public class Rocker.Backend.App : Object {
 
     public enum AppType {
         APP,
@@ -85,9 +85,9 @@ public class Panther.Backend.App : Object {
         generic_name = info.get_generic_name ();
         //warning("entry id:" + entry.get_desktop_file_id ());  
         /*firstres = 0;
-        firstres = (int)Panther.settings.screen_resolution.substring(0, Panther.settings.screen_resolution.index_of("x"));
+        firstres = (int)Rocker.settings.screen_resolution.substring(0, Rocker.settings.screen_resolution.index_of("x"));
         secondres =  0;
-        secondres =  (int)Panther.settings.screen_resolution.substring(Panther.settings.screen_resolution.index_of("x") + 1);
+        secondres =  (int)Rocker.settings.screen_resolution.substring(Rocker.settings.screen_resolution.index_of("x") + 1);
         //res = firstres + secondres;
         message(firstres.to_string());*/
         if (info.get_icon () is ThemedIcon) {
@@ -101,7 +101,7 @@ public class Panther.Backend.App : Object {
         if (icon == null) {
             update_icon ();
 
-            Panther.icon_theme.changed.connect (update_icon);
+            Rocker.icon_theme.changed.connect (update_icon);
         }
     }
 
@@ -134,11 +134,11 @@ public class Panther.Backend.App : Object {
     }
 
     ~App () {
-        Panther.icon_theme.changed.disconnect (update_icon);
+        Rocker.icon_theme.changed.disconnect (update_icon);
     }
 
     public void update_icon () {
-        if(Panther.settings.icon_size == 0)
+        if(Rocker.settings.icon_size == 0)
         {
             /*if(res < 2000)
               icon = load_icon (34);
@@ -148,7 +148,7 @@ public class Panther.Backend.App : Object {
               icon = load_icon (64);
         }
         else {
-            icon = load_icon (Panther.settings.icon_size);
+            icon = load_icon (Rocker.settings.icon_size);
         }
 
         icon_changed ();
@@ -186,7 +186,7 @@ public class Panther.Backend.App : Object {
             }
 
             try {
-                return Panther.icon_theme.load_icon ("application-default-icon",
+                return Rocker.icon_theme.load_icon ("application-default-icon",
                     size, Gtk.IconLookupFlags.FORCE_SIZE);
             } catch (Error e) {
                 critical (e.message);
@@ -202,7 +202,7 @@ public class Panther.Backend.App : Object {
         IconLoadFallbackMethod[] fallbacks = {
             new IconLoadFallbackMethod (() => {
                 try {
-                    icon = Panther.icon_theme.load_icon (icon_name, size, flags);
+                    icon = Rocker.icon_theme.load_icon (icon_name, size, flags);
                 } catch (Error e) {
                     warning ("Could not load icon. Falling back to method 2");
                 }
@@ -215,7 +215,7 @@ public class Panther.Backend.App : Object {
                     check_icon_again = false;
 
                     Timeout.add_seconds (RECHECK_TIMEOUT, () => {
-                        Panther.icon_theme.rescan_if_needed ();
+                        Rocker.icon_theme.rescan_if_needed ();
                         update_icon ();
                         return false;
                     });
@@ -226,7 +226,7 @@ public class Panther.Backend.App : Object {
                 try {
                     if (icon_name.last_index_of (".") > 0) {
                         var name = icon_name[0:icon_name.last_index_of (".")];
-                        icon = Panther.icon_theme.load_icon (name, size, flags);
+                        icon = Rocker.icon_theme.load_icon (name, size, flags);
                     }
                 } catch (Error e) {
                     warning ("Could not load icon. Falling back to method 3");
@@ -243,7 +243,7 @@ public class Panther.Backend.App : Object {
 
             new IconLoadFallbackMethod (() => {
                 try {
-                    icon = Panther.icon_theme.load_icon ("application-default-icon", size, flags);
+                    icon = Rocker.icon_theme.load_icon ("application-default-icon", size, flags);
                  } catch (Error e) {
                      warning ("Could not load icon. Falling back to method 5");
                  }
@@ -251,7 +251,7 @@ public class Panther.Backend.App : Object {
 
             new IconLoadFallbackMethod (() => {
                  try {
-                    icon = Panther.icon_theme.load_icon ("image-missing", size, flags);
+                    icon = Rocker.icon_theme.load_icon ("image-missing", size, flags);
                  } catch (Error e) {
                     error ("Could not find a fallback icon to load");
                  }
@@ -270,8 +270,8 @@ public class Panther.Backend.App : Object {
         Gdk.Pixbuf? tmp_loadable_icon;
         try {
             var icon_stream = loadable_icon.load (0, null, null);
-            tmp_loadable_icon = new Gdk.Pixbuf.from_stream_at_scale (icon_stream, Panther.settings.icon_size,
-                                                                     Panther.settings.icon_size, true, null);
+            tmp_loadable_icon = new Gdk.Pixbuf.from_stream_at_scale (icon_stream, Rocker.settings.icon_size,
+                                                                     Rocker.settings.icon_size, true, null);
         } catch (Error e) {
             tmp_loadable_icon = null;
         }

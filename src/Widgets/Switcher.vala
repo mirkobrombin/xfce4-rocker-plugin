@@ -19,7 +19,7 @@
 
 using Gtk;
 
-public class Panther.Widgets.Switcher : Gtk.Box {
+public class Rocker.Widgets.Switcher : Gtk.Box {
 
   const string SWITCHER_STYLE_CSS = """
       .switcher {

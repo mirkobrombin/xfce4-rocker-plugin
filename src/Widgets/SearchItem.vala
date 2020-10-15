@@ -18,7 +18,7 @@
 
 using Gtk;
 
-namespace Panther.Widgets {
+namespace Rocker.Widgets {
 
     public class SearchItem : Gtk.Button {
 

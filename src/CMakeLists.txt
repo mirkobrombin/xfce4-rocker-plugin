@@ -2,9 +2,9 @@
 ### Do not edit
 
 set (DATADIR "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_DATAROOTDIR}")
-set (PKGDATADIR "${DATADIR}/panther_launcher")
-set (GETTEXT_PACKAGE "panther_launcher")
-set (RELEASE_NAME "panther_launcher")
+set (PKGDATADIR "${DATADIR}/rocker_launcher")
+set (GETTEXT_PACKAGE "rocker_launcher")
+set (RELEASE_NAME "rocker_launcher")
 set (CMAKE_C_FLAGS "")
 set (PREFIX ${CMAKE_INSTALL_PREFIX})
 set (VERSION "1.12.0")
@@ -42,7 +42,6 @@ set (VALA_PACKAGES ${VALA_PACKAGES} libsoup-2.4)
 set (VALA_PACKAGES ${VALA_PACKAGES} pango)
 set (VALA_PACKAGES ${VALA_PACKAGES} pangocairo)
 set (VALA_PACKAGES ${VALA_PACKAGES} x11)
-set (VALA_PACKAGES ${VALA_PACKAGES} plank)
 #set (VALA_PACKAGES ${VALA_PACKAGES} exo-1)
 
 #set (XFCE_VALA_PACKAGES ${XFCE_VALA_PACKAGES} libxfce4panel-2.0)
@@ -58,9 +57,8 @@ set (APP_SOURCES ${APP_SOURCES} Backend/AppSystem.vala)
 set (APP_SOURCES ${APP_SOURCES} Backend/DBusService.vala)
 set (APP_SOURCES ${APP_SOURCES} Backend/RelevancyService.vala)
 set (APP_SOURCES ${APP_SOURCES} Backend/SynapseSearch.vala)
-set (APP_SOURCES ${APP_SOURCES} Backend/Plank.vala)
-set (APP_SOURCES ${APP_SOURCES} Panther.vala)
-set (APP_SOURCES ${APP_SOURCES} PantherView.vala)
+set (APP_SOURCES ${APP_SOURCES} Rocker.vala)
+set (APP_SOURCES ${APP_SOURCES} RockerView.vala)
 set (APP_SOURCES ${APP_SOURCES} Pixels.vala)
 set (APP_SOURCES ${APP_SOURCES} Settings.vala)
 set (APP_SOURCES ${APP_SOURCES} Utils.vala)
@@ -95,11 +93,6 @@ if (HAVE_ZEITGEIST)
 	set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DHAVE_ZEITGEIST " )
 	set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_ZEITGEIST " )
 endif ()
-if (HAS_PLANK)
-	set (COMPILE_OPTIONS ${COMPILE_OPTIONS} -D HAS_PLANK)
-	set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DHAS_PLANK " )
-	set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAS_PLANK " )
-endif ()
 if (DISABLE_FLASHBACK)
 	set (COMPILE_OPTIONS ${COMPILE_OPTIONS} -D DISABLE_FLASHBACK)
 	set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DDISABLE_FLASHBACK " )
@@ -117,8 +110,8 @@ endif()
 
 set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DGMENU_I_KNOW_THIS_IS_UNSTABLE" )
 
-vala_precompile(VALA_C_XFCE pantherplugin
-	Xfce4PantherPlugin.vala
+vala_precompile(VALA_C_XFCE rockerplugin
+	Xfce4RockerPlugin.vala
 PACKAGES
 	${XFCE_VALA_PACKAGES}
 CUSTOM_VAPIS
@@ -129,15 +122,15 @@ OPTIONS
 
 )
 
-#add_executable(pantherplugin ${VALA_C})
-add_library (pantherplugin SHARED
+#add_executable(rockerplugin ${VALA_C})
+add_library (rockerplugin SHARED
         ${VALA_C_XFCE}
     )
 
 include_directories(${GTK+_INCLUDE_DIRS} ${XFCE_INCLUDE_DIRS})
-target_link_libraries( pantherplugin ${GTK+_LIBRARIES} ${XFCE_LIBRARIES} -lm )
+target_link_libraries( rockerplugin ${GTK+_LIBRARIES} ${XFCE_LIBRARIES} -lm )
 
-vala_precompile(VALA_C panther_launcher
+vala_precompile(VALA_C rocker_launcher
 	${APP_SOURCES}
 PACKAGES
 	${VALA_PACKAGES}
@@ -145,24 +138,24 @@ OPTIONS
 	${COMPILE_OPTIONS}
 )
 
-add_executable(panther_launcher ${VALA_C})
-target_link_libraries( panther_launcher m )
+add_executable(rocker_launcher ${VALA_C})
+target_link_libraries( rocker_launcher m )
 
 install(TARGETS
-	pantherplugin
+	rockerplugin
 DESTINATION
 	${CMAKE_INSTALL_LIBDIR}/xfce4/panel/plugins
 )
 
 install(TARGETS
-	panther_launcher
+	rocker_launcher
 RUNTIME DESTINATION
 	${CMAKE_INSTALL_BINDIR}
 )
 
 if(HAVE_VALADOC)
-	valadoc(panther_launcher
-		${CMAKE_BINARY_DIR}/valadoc/panther_launcher
+	valadoc(rocker_launcher
+		${CMAKE_BINARY_DIR}/valadoc/rocker_launcher
 		${APP_SOURCES}
 	PACKAGES
 		${VALA_PACKAGES}
@@ -172,6 +165,6 @@ if(HAVE_VALADOC)
 	install(DIRECTORY
 		${CMAKE_BINARY_DIR}/valadoc
 	DESTINATION
-		${CMAKE_INSTALL_DATAROOTDIR}/doc/panther_launcher
+		${CMAKE_INSTALL_DATAROOTDIR}/doc/rocker_launcher
 	)
 endif()

@@ -22,12 +22,12 @@ using GLib;
 
 // project version = 1.12.0
 
-Panther.Panther app;
-//Panther.PantherView view;
+Rocker.Rocker app;
+//Rocker.RockerView view;
 
-public class Panther.Panther : Gtk.Application {
+public class Rocker.Rocker : Gtk.Application {
 
-    public PantherView view = null;
+    public RockerView view = null;
     public static bool silent = false;
     public static bool command_mode = false;
     public bool launched = false;
@@ -42,7 +42,7 @@ public class Panther.Panther : Gtk.Application {
     private int view_height;
 
     construct {
-        application_id = "com.rastersoft.panther";
+        application_id = "pm.mirko.rocker";
     }
 
     public int set_view_width {
@@ -57,7 +57,7 @@ public class Panther.Panther : Gtk.Application {
       }
     }
 
-    public Panther () {
+    public Rocker () {
         settings = new Settings ();
         Pixels.ITEM_SIZE = settings.icon_size * 2;
         Pixels.SIDEBAR_WIDTH = Pixels.PADDING + Pixels.ITEM_SIZE - Pixels.SIDEBAR_GRID_PADDING - 1;
@@ -79,28 +79,28 @@ public class Panther.Panther : Gtk.Application {
       if (this.get_windows () == null) {
           this.view_width = -1;
           this.view_height = -1;
-          this.view = new PantherView ();
+          this.view = new RockerView ();
           this.view.set_application (this);
           this.view.draw.connect_after(this.realize_view);
 
           if (dbus_service == null)
               this.dbus_service = new DBusService (view);
 
-          if (!Panther.silent) {
-              this.view.show_panther ();
+          if (!Rocker.silent) {
+              this.view.show_rocker ();
           }
       } else {
-          if (this.view.visible && !Panther.silent) {
+          if (this.view.visible && !Rocker.silent) {
               this.view.hide ();
           } else {
-              this.view.show_panther ();
+              this.view.show_rocker ();
           }
       }
-      Panther.silent = false;
+      Rocker.silent = false;
     }
 
     static const OptionEntry[] entries = {
-        { "silent", 's', 0, OptionArg.NONE, ref silent, "Launch Panther as a background process without it appearing visually.", null },
+        { "silent", 's', 0, OptionArg.NONE, ref silent, "Launch Rocker as a background process without it appearing visually.", null },
         { "command-mode", 'c', 0, OptionArg.NONE, ref command_mode, "This feature is not implemented yet. When it is, description will be changed.", null },
         { null }
     };
@@ -113,7 +113,7 @@ public class Panther.Panther : Gtk.Application {
 
         if (args.length > 1) {
             var context = new OptionContext ("");
-            context.add_main_entries (entries, "panther");
+            context.add_main_entries (entries, "rocker");
             context.add_group (Gtk.get_option_group (true));
 
             try {
@@ -123,9 +123,9 @@ public class Panther.Panther : Gtk.Application {
             }
 
         }
-        app = new Panther ();
+        app = new Rocker ();
 
-        Bus.own_name (BusType.SESSION, "com.rastersoft.panther.remotecontrol", BusNameOwnerFlags.NONE, on_bus_aquired, () => {}, () => {});
+        Bus.own_name (BusType.SESSION, "pm.mirko.rocker.remotecontrol", BusNameOwnerFlags.NONE, on_bus_aquired, () => {}, () => {});
 
         return app.run (args);
     }
@@ -133,13 +133,13 @@ public class Panther.Panther : Gtk.Application {
 
 void on_bus_aquired (DBusConnection conn) {
     try {
-        conn.register_object ("/com/rastersoft/panther/remotecontrol", new RemoteControl ());
+        conn.register_object ("/pm/mirko//rocker/remotecontrol", new RemoteControl ());
     } catch (IOError e) {
         GLib.stderr.printf ("Could not register service\n");
     }
 }
 
-[DBus (name = "com.rastersoft.panther.remotecontrol")]
+[DBus (name = "pm.mirko.rocker.remotecontrol")]
 public class RemoteControl : GLib.Object {
 
     public int do_ping(int v) {

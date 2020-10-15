@@ -18,7 +18,7 @@
 
 using Gtk;
 
-namespace Panther {
+namespace Rocker {
 
     public enum Modality {
         NORMAL_VIEW = 0,
@@ -50,13 +50,13 @@ namespace Panther {
             this.set_layout(Gtk.ButtonBoxStyle.START);
 
             view_all = new Gtk.ToggleButton();
-            var image = new Gtk.Image.from_icon_name ("panther-icons-symbolic", Gtk.IconSize.MENU);
+            var image = new Gtk.Image.from_icon_name ("rocker-icons-symbolic", Gtk.IconSize.MENU);
             image.tooltip_text = _("View as Grid");
             view_all.add(image);
             this.pack_start(view_all,false,false,0);
 
             view_cats = new Gtk.ToggleButton();
-            image = new Gtk.Image.from_icon_name ("panther-categories-symbolic", Gtk.IconSize.MENU);
+            image = new Gtk.Image.from_icon_name ("rocker-categories-symbolic", Gtk.IconSize.MENU);
             image.tooltip_text = _("View by Category");
             view_cats.add(image);
             this.pack_start (view_cats,false,false,0);
@@ -94,9 +94,9 @@ namespace Panther {
 
     }
 
-    public class PantherView : Gtk.Window {
+    public class RockerView : Gtk.Window {
 
-        const string PANTHER_STYLE_CSS = """
+        const string ROCKER_STYLE_CSS = """
             .view2 {
                 border: none;
                 box-shadow: none;
@@ -159,32 +159,32 @@ namespace Panther {
         private int primary_monitor = 0;
         private bool avoid_show;
 
-        public PantherView () {
+        public RockerView () {
             primary_monitor = screen.get_primary_monitor ();
             Gdk.Rectangle geometry;
             screen.get_monitor_geometry (primary_monitor, out geometry);
-            if (Panther.settings.rows_int == 0) {
-                Panther.settings.rows = (geometry.height * 5 / 9) / Pixels.ITEM_SIZE;
+            if (Rocker.settings.rows_int == 0) {
+                Rocker.settings.rows = (geometry.height * 5 / 9) / Pixels.ITEM_SIZE;
             } else {
-                Panther.settings.rows = Panther.settings.rows_int;
+                Rocker.settings.rows = Rocker.settings.rows_int;
             }
 
-            if (Panther.settings.columns_int == 0) {
-                Panther.settings.columns = (geometry.width * 2 / 5) / Pixels.ITEM_SIZE;
+            if (Rocker.settings.columns_int == 0) {
+                Rocker.settings.columns = (geometry.width * 2 / 5) / Pixels.ITEM_SIZE;
             } else {
-                Panther.settings.columns = Panther.settings.columns_int;
+                Rocker.settings.columns = Rocker.settings.columns_int;
             }
 
             var provider = new Gtk.CssProvider ();
             try {
-                provider.load_from_data (PANTHER_STYLE_CSS, PANTHER_STYLE_CSS.length);
+                provider.load_from_data (ROCKER_STYLE_CSS, ROCKER_STYLE_CSS.length);
                 Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             } catch (Error e) {
                 critical (e.message);
             }
 
             // Window properties
-            this.title = "Panther";
+            this.title = "Rocker";
             this.skip_pager_hint = true;
             this.skip_taskbar_hint = true;
             this.set_keep_above (true);
@@ -198,7 +198,7 @@ namespace Panther {
             // Have the window in the right place
             read_settings (true);
 
-            Panther.icon_theme = Gtk.IconTheme.get_default ();
+            Rocker.icon_theme = Gtk.IconTheme.get_default ();
 
             app_system = new Backend.AppSystem ();
             synapse = new Backend.SynapseSearch ();
@@ -208,7 +208,7 @@ namespace Panther {
             app_name = app_system.get_apps_by_name ();
             saved_apps = app_system.get_saved_apps ();
 
-            if (Panther.settings.screen_resolution != @"$(geometry.width)x$(geometry.height)") {
+            if (Rocker.settings.screen_resolution != @"$(geometry.width)x$(geometry.height)") {
                 setup_size ();
             }
 
@@ -233,7 +233,7 @@ namespace Panther {
             primary_monitor = screen.get_primary_monitor ();
             Gdk.Rectangle geometry;
             screen.get_monitor_geometry (primary_monitor, out geometry);
-            Panther.settings.screen_resolution = @"$(geometry.width)x$(geometry.height)";
+            Rocker.settings.screen_resolution = @"$(geometry.width)x$(geometry.height)";
             //default_columns = 6;
             //default_rows = 5;
             while ((calculate_grid_width () >= 2 * geometry.width / 3)) {
@@ -244,11 +244,11 @@ namespace Panther {
                 default_rows--;
             }
 
-            if (Panther.settings.columns != default_columns) {
-                Panther.settings.columns = default_columns;
+            if (Rocker.settings.columns != default_columns) {
+                Rocker.settings.columns = default_columns;
             }
-            if (Panther.settings.rows != default_rows)
-                Panther.settings.rows = default_rows;
+            if (Rocker.settings.rows != default_rows)
+                Rocker.settings.rows = default_rows;
         }
 
         private void setup_ui () {
@@ -256,7 +256,7 @@ namespace Panther {
 
             var provider = new Gtk.CssProvider ();
             try {
-                provider.load_from_data (PANTHER_STYLE_CSS, PANTHER_STYLE_CSS.length);
+                provider.load_from_data (ROCKER_STYLE_CSS, ROCKER_STYLE_CSS.length);
                 Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             } catch (Error e) {
                 critical (e.message);
@@ -282,7 +282,7 @@ namespace Panther {
             view_selector_revealer.transition_type = Gtk.RevealerTransitionType.SLIDE_RIGHT;
             view_selector_revealer.add (view_selector);
 
-            if (Panther.settings.use_category)
+            if (Rocker.settings.use_category)
                 this.view_selector.selected = 1;
             else
                 this.view_selector.selected = 0;
@@ -293,7 +293,7 @@ namespace Panther {
             search_entry.margin_start = 6;
             search_entry.margin_end = 6;
 
-            if (Panther.settings.show_category_filter) {
+            if (Rocker.settings.show_category_filter) {
                 //top.add (view_selector_revealer);
             }
             top.add (search_entry);
@@ -302,7 +302,7 @@ namespace Panther {
             stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
 
             // Create the "NORMAL_VIEW"
-            grid_view = new Widgets.Grid (Panther.settings.rows, Panther.settings.columns);
+            grid_view = new Widgets.Grid (Rocker.settings.rows, Rocker.settings.columns);
             stack.add_named (grid_view, "normal");
 
             // Create the "CATEGORY_VIEW"
@@ -329,7 +329,7 @@ namespace Panther {
 
             this.add (event_box);
 
-            if (Panther.settings.use_category)
+            if (Rocker.settings.use_category)
                 set_modality (Modality.CATEGORY_VIEW);
             else
                 set_modality (Modality.NORMAL_VIEW);
@@ -466,8 +466,8 @@ namespace Panther {
             });
 
             // Auto-update settings when changed
-            Panther.settings.rows_changed.connect (() => {read_settings (false, false, true);});
-            Panther.settings.columns_changed.connect (() => {read_settings (false, false, true);});
+            Rocker.settings.rows_changed.connect (() => {read_settings (false, false, true);});
+            Rocker.settings.columns_changed.connect (() => {read_settings (false, false, true);});
 
             // Auto-update applications grid
             app_system.changed.connect (() => {
@@ -484,7 +484,7 @@ namespace Panther {
             screen.size_changed.connect (() => {
                 Gdk.Rectangle geometry;
                 screen.get_monitor_geometry (screen.get_primary_monitor (), out geometry);
-                if (Panther.settings.screen_resolution != @"$(geometry.width)x$(geometry.height)") {
+                if (Rocker.settings.screen_resolution != @"$(geometry.width)x$(geometry.height)") {
                     setup_size ();
                     setup_ui ();
                 }
@@ -507,7 +507,7 @@ namespace Panther {
             var workspace_area = this.get_screen().get_monitor_workarea(this.screen.get_primary_monitor());
 
             int new_y;
-            if (Panther.settings.show_at_top) {
+            if (Rocker.settings.show_at_top) {
                 new_y = workspace_area.y;
             } else {
                 new_y = workspace_area.y + workspace_area.height - this.get_window().get_height();
@@ -826,7 +826,7 @@ namespace Panther {
             return false;
         }
 
-        public void show_panther () {
+        public void show_rocker () {
 
             if (this.avoid_show) {
                 return;
@@ -894,8 +894,8 @@ namespace Panther {
             switch (modality) {
                 case Modality.NORMAL_VIEW:
 
-                    if (Panther.settings.use_category)
-                        Panther.settings.use_category = false;
+                    if (Rocker.settings.use_category)
+                        Rocker.settings.use_category = false;
                     view_selector_revealer.set_reveal_child (true);
                     stack.set_visible_child_name ("normal");
 
@@ -904,8 +904,8 @@ namespace Panther {
 
                 case Modality.CATEGORY_VIEW:
 
-                    if (!Panther.settings.use_category)
-                        Panther.settings.use_category = true;
+                    if (!Rocker.settings.use_category)
+                        Rocker.settings.use_category = true;
                     view_selector_revealer.set_reveal_child (true);
                     stack.set_visible_child_name ("category");
 
@@ -975,17 +975,17 @@ namespace Panther {
 
         private void read_settings (bool first_start = false, bool check_columns = true, bool check_rows = true) {
             if (check_columns) {
-                if (Panther.settings.columns > 3)
-                    default_columns = Panther.settings.columns;
+                if (Rocker.settings.columns > 3)
+                    default_columns = Rocker.settings.columns;
                 else
-                    default_columns = Panther.settings.columns = 4;
+                    default_columns = Rocker.settings.columns = 4;
             }
 
             if (check_rows) {
-                if (Panther.settings.rows > 1)
-                    default_rows = Panther.settings.rows;
+                if (Rocker.settings.rows > 1)
+                    default_rows = Rocker.settings.rows;
                 else
-                    default_rows = Panther.settings.rows = 2;
+                    default_rows = Rocker.settings.rows = 2;
             }
 
             if (!first_start) {

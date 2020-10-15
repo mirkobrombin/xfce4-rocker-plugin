@@ -1,5 +1,5 @@
 <schemalist>
-	<schema path="/org/rastersoft/panther/" id="org.rastersoft.panther" gettext-domain="panther">
+	<schema path="/org/mirko/rocker/" id="pm.mirko.rocker" gettext-domain="rocker">
         <key name="columns" type="i">
             <default>4</default>
             <summary>The default number of columns</summary>
@@ -13,12 +13,12 @@
         <key name="icon-size" type="i">
             <default>64</default>
             <summary>The default icon size of apps</summary>
-            <description>This value manages the size of the icons in Panther.</description>
+            <description>This value manages the size of the icons in Rocker.</description>
         </key>
 	<key name="font-size" type="d">
             <default>0.0</default>
             <summary>The default font size for apps</summary>
-            <description>This value manages the size of the fonts in Panther. If it is zero, it will use the system value.</description>
+            <description>This value manages the size of the fonts in Rocker. If it is zero, it will use the system value.</description>
         </key>
         <key name="show-category-filter" type="b">
             <default>true</default>
@@ -38,7 +38,7 @@
         <key name="screen-resolution" type="s">
             <default>""</default>
             <summary>The last resolution of the screen</summary>
-            <description>This value makes Panther able to adapt to each screen.</description>
+            <description>This value makes Rocker able to adapt to each screen.</description>
         </key>
 	</schema>
 </schemalist>

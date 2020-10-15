@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nick/work/panther_launcher
+CMAKE_SOURCE_DIR = /home/nick/work/rocker_launcher
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nick/work/panther_launcher
+CMAKE_BINARY_DIR = /home/nick/work/rocker_launcher
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,9 +135,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/work/panther_launcher/CMakeFiles /home/nick/work/panther_launcher/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/work/rocker_launcher/CMakeFiles /home/nick/work/rocker_launcher/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/work/panther_launcher/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/work/rocker_launcher/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -192,17 +192,17 @@ pot/fast:
 .PHONY : pot/fast
 
 #=============================================================================
-# Target rules for targets named panther_launcher
+# Target rules for targets named rocker_launcher
 
 # Build rule for target.
-panther_launcher: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 panther_launcher
-.PHONY : panther_launcher
+rocker_launcher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rocker_launcher
+.PHONY : rocker_launcher
 
 # fast build rule for target.
-panther_launcher/fast:
-	$(MAKE) -f src/CMakeFiles/panther_launcher.dir/build.make src/CMakeFiles/panther_launcher.dir/build
-.PHONY : panther_launcher/fast
+rocker_launcher/fast:
+	$(MAKE) -f src/CMakeFiles/rocker_launcher.dir/build.make src/CMakeFiles/rocker_launcher.dir/build
+.PHONY : rocker_launcher/fast
 
 # Help Target
 help:
@@ -219,7 +219,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... i18n"
 	@echo "... pot"
-	@echo "... panther_launcher"
+	@echo "... rocker_launcher"
 .PHONY : help
 
 

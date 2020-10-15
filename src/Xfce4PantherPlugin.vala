@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 //
-//  Copyright (C) 2011-2012 Panther Developers
+//  Copyright (C) 2011-2012 Rocker Developers
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -16,20 +16,20 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-[DBus (name = "com.rastersoft.panther")]
-interface Panther_Service : Object {
+[DBus (name = "pm.mirko.rocker")]
+interface Rocker_Service : Object {
   public signal void visibility_changed (bool launcher_visible);
 }
 
 Gtk.ToggleButton app_button;
 
-namespace Panther {
+namespace Rocker {
 
   public class Plugin : Xfce.PanelPlugin {
 
-    //private Panther app;
+    //private Rocker app;
 
-    //public PantherView view = null;
+    //public RockerView view = null;
     public static bool silent = false;
     public static bool command_mode = false;
     public bool launched = false;
@@ -42,7 +42,7 @@ namespace Panther {
     private int view_height;
     private bool first = true;
 
-    private Panther_Service panther_bus;
+    private Rocker_Service rocker_bus;
 
     public override void @construct() {
 
@@ -54,13 +54,13 @@ namespace Panther {
 
         app_button.show ();
 
-        panther_bus = Bus.get_proxy_sync (BusType.SESSION, "com.rastersoft.panther",
-                                                        "/com/rastersoft/panther");
+        rocker_bus = Bus.get_proxy_sync (BusType.SESSION, "pm.mirko.rocker",
+                                                        "/pm/mirko//rocker");
 
         app_button.toggled.connect (() => {
           if (app_button.active) {
               try {
-      					Process.spawn_command_line_async ("panther_launcher");
+      					Process.spawn_command_line_async ("rocker_launcher");
                 //remote_bus.do_show ();
       				} catch (Error e) {
       					warning (e.message);
@@ -69,7 +69,7 @@ namespace Panther {
         });
 
         try{
-          panther_bus.visibility_changed.connect ((visible) => {
+          rocker_bus.visibility_changed.connect ((visible) => {
               if(!visible)
                 app_button.set_active(visible);
               else {
@@ -83,7 +83,7 @@ namespace Panther {
     		menu_show_about ();
     		about.connect (() => {
     				Gtk.show_about_dialog (null,
-    					"program-name", "Panther Launcher",
+    					"program-name", "Rocker Launcher",
     					"comments", "A fork from Slingshot Launcher. Its main change is that it doesn't depend on Gala, Granite or other libraries not available in regular linux distros. It also has been ported to Autovala, allowing an easier build. Finally, it also has an applet for Gnome Flashback and an extension for Gnome Shell, allowing to use it from these desktops.",
     					null);
     			});
@@ -95,5 +95,5 @@ namespace Panther {
 
 [ModuleInit]
 public Type xfce_panel_module_init(TypeModule module) {
-  return typeof (Panther.Plugin);
+  return typeof (Rocker.Plugin);
 }

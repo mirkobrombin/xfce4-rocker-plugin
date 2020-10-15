@@ -7,13 +7,13 @@ foreach(file_data ${list_data})
 		install(DIRECTORY
 			${file_data}
 		DESTINATION
-			${CMAKE_INSTALL_DATAROOTDIR}/panther_launcher
+			${CMAKE_INSTALL_DATAROOTDIR}/rocker_launcher
 		)
 	ELSE()
 		install(FILES
 			${file_data}
 		DESTINATION
-			${CMAKE_INSTALL_DATAROOTDIR}/panther_launcher
+			${CMAKE_INSTALL_DATAROOTDIR}/rocker_launcher
 		)
 	ENDIF()
 endforeach()

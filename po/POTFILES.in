@@ -3,8 +3,8 @@ src/Backend/AppSystem.vala
 src/Backend/DBusService.vala
 src/Backend/RelevancyService.vala
 src/Backend/SynapseSearch.vala
-src/Panther.vala
-src/PantherView.vala
+src/Rocker.vala
+src/RockerView.vala
 src/Pixels.vala
 src/Settings.vala
 src/Utils.vala
@@ -17,7 +17,7 @@ src/Widgets/SearchItem.vala
 src/Widgets/SearchView.vala
 src/Widgets/Sidebar.vala
 src/Widgets/Switcher.vala
-src/Xfce4PantherPlugin.vala
+src/Xfce4RockerPlugin.vala
 src/synapse-core/common-actions.vala
 src/synapse-core/config-service.vala
 src/synapse-core/data-sink.vala
@@ -41,8 +41,8 @@ src/Backend/DBusService.c
 src/Backend/RelevancyService.c
 src/Backend/SynapseSearch.c
 src/Config.c
-src/Panther.c
-src/PantherView.c
+src/Rocker.c
+src/RockerView.c
 src/Pixels.c
 src/Settings.c
 src/Utils.c
@@ -53,7 +53,7 @@ src/Widgets/SearchItem.c
 src/Widgets/SearchView.c
 src/Widgets/Sidebar.c
 src/Widgets/Switcher.c
-src/Xfce4PantherPlugin.c
+src/Xfce4RockerPlugin.c
 src/synapse-core/common-actions.c
 src/synapse-core/config-service.c
 src/synapse-core/data-sink.c

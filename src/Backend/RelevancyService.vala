@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 //
-//  Copyright (C) 2011-2012 Panther Developers
+//  Copyright (C) 2011-2012 Rocker Developers
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 //  Thanks to Synapse Developers for this class
 
 #if HAVE_ZEITGEIST
-public class Panther.Backend.RelevancyService : Object {
+public class Rocker.Backend.RelevancyService : Object {
 
     private Zeitgeist.Log zg_log;
     private Zeitgeist.DataSourceRegistry zg_dsr;

@@ -18,7 +18,7 @@
 
 using Gtk;
 
-public class Panther.Widgets.Sidebar : Gtk.TreeView {
+public class Rocker.Widgets.Sidebar : Gtk.TreeView {
 
     private Gtk.TreeStore store;
 

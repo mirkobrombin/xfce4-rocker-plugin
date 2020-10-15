@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nick/work/panther_launcher
+CMAKE_SOURCE_DIR = /home/nick/work/rocker_launcher
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nick/work/panther_launcher
+CMAKE_BINARY_DIR = /home/nick/work/rocker_launcher
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,14 +135,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/nick/work/panther_launcher && $(CMAKE_COMMAND) -E cmake_progress_start /home/nick/work/panther_launcher/CMakeFiles /home/nick/work/panther_launcher/po/CMakeFiles/progress.marks
-	cd /home/nick/work/panther_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/work/panther_launcher/CMakeFiles 0
+	cd /home/nick/work/rocker_launcher && $(CMAKE_COMMAND) -E cmake_progress_start /home/nick/work/rocker_launcher/CMakeFiles /home/nick/work/rocker_launcher/po/CMakeFiles/progress.marks
+	cd /home/nick/work/rocker_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nick/work/rocker_launcher/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/nick/work/panther_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/clean
+	cd /home/nick/work/rocker_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/nick/work/panther_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/preinstall
+	cd /home/nick/work/rocker_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/nick/work/panther_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/preinstall
+	cd /home/nick/work/rocker_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/nick/work/panther_launcher && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/nick/work/rocker_launcher && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 po/CMakeFiles/i18n.dir/rule:
-	cd /home/nick/work/panther_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/CMakeFiles/i18n.dir/rule
+	cd /home/nick/work/rocker_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/CMakeFiles/i18n.dir/rule
 .PHONY : po/CMakeFiles/i18n.dir/rule
 
 # Convenience name for target.
@@ -177,12 +177,12 @@ i18n: po/CMakeFiles/i18n.dir/rule
 
 # fast build rule for target.
 i18n/fast:
-	cd /home/nick/work/panther_launcher && $(MAKE) -f po/CMakeFiles/i18n.dir/build.make po/CMakeFiles/i18n.dir/build
+	cd /home/nick/work/rocker_launcher && $(MAKE) -f po/CMakeFiles/i18n.dir/build.make po/CMakeFiles/i18n.dir/build
 .PHONY : i18n/fast
 
 # Convenience name for target.
 po/CMakeFiles/pot.dir/rule:
-	cd /home/nick/work/panther_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/CMakeFiles/pot.dir/rule
+	cd /home/nick/work/rocker_launcher && $(MAKE) -f CMakeFiles/Makefile2 po/CMakeFiles/pot.dir/rule
 .PHONY : po/CMakeFiles/pot.dir/rule
 
 # Convenience name for target.
@@ -192,7 +192,7 @@ pot: po/CMakeFiles/pot.dir/rule
 
 # fast build rule for target.
 pot/fast:
-	cd /home/nick/work/panther_launcher && $(MAKE) -f po/CMakeFiles/pot.dir/build.make po/CMakeFiles/pot.dir/build
+	cd /home/nick/work/rocker_launcher && $(MAKE) -f po/CMakeFiles/pot.dir/build.make po/CMakeFiles/pot.dir/build
 .PHONY : pot/fast
 
 # Help Target
@@ -221,6 +221,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/nick/work/panther_launcher && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/nick/work/rocker_launcher && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

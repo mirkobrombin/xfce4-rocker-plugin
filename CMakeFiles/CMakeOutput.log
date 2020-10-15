@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/nick/work/panther_launcher/CMakeFiles/3.5.1/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/nick/work/rocker_launcher/CMakeFiles/3.5.1/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,28 +23,28 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/nick/work/panther_launcher/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/nick/work/rocker_launcher/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
+Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_55b1d/fast"
 /usr/bin/make -f CMakeFiles/cmTC_55b1d.dir/build.make CMakeFiles/cmTC_55b1d.dir/build
-make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_55b1d.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_55b1d.dir/testCCompiler.c.o   -c /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp/testCCompiler.c
+/usr/bin/cc     -o CMakeFiles/cmTC_55b1d.dir/testCCompiler.c.o   -c /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp/testCCompiler.c
 Linking C executable cmTC_55b1d
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55b1d.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTC_55b1d.dir/testCCompiler.c.o  -o cmTC_55b1d -rdynamic 
-make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
+Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_c5206/fast"
 /usr/bin/make -f CMakeFiles/cmTC_c5206.dir/build.make CMakeFiles/cmTC_c5206.dir/build
-make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_c5206.dir/CMakeCCompilerABI.c.o
 /usr/bin/cc     -o CMakeFiles/cmTC_c5206.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
 Linking C executable cmTC_c5206
@@ -61,16 +61,16 @@ COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
 COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c5206' '-rdynamic' '-mtune=generic' '-march=x86-64'
  /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cctXtToT.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_c5206 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_c5206.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp]
   ignore line: []
   ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c5206/fast"]
   ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c5206.dir/build.make CMakeFiles/cmTC_c5206.dir/build]
-  ignore line: [make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp']
+  ignore line: [make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp']
   ignore line: [Building C object CMakeFiles/cmTC_c5206.dir/CMakeCCompilerABI.c.o]
   ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_c5206.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
   ignore line: [Linking C executable cmTC_c5206]
@@ -153,17 +153,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
+Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_b3425/fast"
 /usr/bin/make -f CMakeFiles/cmTC_b3425.dir/build.make CMakeFiles/cmTC_b3425.dir/build
-make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_b3425.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_b3425.dir/feature_tests.c.o   -c /home/nick/work/panther_launcher/CMakeFiles/feature_tests.c
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_b3425.dir/feature_tests.c.o   -c /home/nick/work/rocker_launcher/CMakeFiles/feature_tests.c
 Linking C executable cmTC_b3425
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3425.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTC_b3425.dir/feature_tests.c.o  -o cmTC_b3425 -rdynamic 
-make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -173,17 +173,17 @@ make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
+Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_df139/fast"
 /usr/bin/make -f CMakeFiles/cmTC_df139.dir/build.make CMakeFiles/cmTC_df139.dir/build
-make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_df139.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_df139.dir/feature_tests.c.o   -c /home/nick/work/panther_launcher/CMakeFiles/feature_tests.c
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_df139.dir/feature_tests.c.o   -c /home/nick/work/rocker_launcher/CMakeFiles/feature_tests.c
 Linking C executable cmTC_df139
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df139.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTC_df139.dir/feature_tests.c.o  -o cmTC_df139 -rdynamic 
-make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -193,17 +193,17 @@ make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
+Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_c0829/fast"
 /usr/bin/make -f CMakeFiles/cmTC_c0829.dir/build.make CMakeFiles/cmTC_c0829.dir/build
-make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_c0829.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_c0829.dir/feature_tests.c.o   -c /home/nick/work/panther_launcher/CMakeFiles/feature_tests.c
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_c0829.dir/feature_tests.c.o   -c /home/nick/work/rocker_launcher/CMakeFiles/feature_tests.c
 Linking C executable cmTC_c0829
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0829.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTC_c0829.dir/feature_tests.c.o  -o cmTC_c0829 -rdynamic 
-make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -211,25 +211,25 @@ make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
+Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_0e4fb/fast"
 /usr/bin/make -f CMakeFiles/cmTC_0e4fb.dir/build.make CMakeFiles/cmTC_0e4fb.dir/build
-make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 Building CXX object CMakeFiles/cmTC_0e4fb.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_0e4fb.dir/testCXXCompiler.cxx.o -c /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+/usr/bin/c++      -o CMakeFiles/cmTC_0e4fb.dir/testCXXCompiler.cxx.o -c /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
 Linking CXX executable cmTC_0e4fb
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e4fb.dir/link.txt --verbose=1
 /usr/bin/c++        CMakeFiles/cmTC_0e4fb.dir/testCXXCompiler.cxx.o  -o cmTC_0e4fb -rdynamic 
-make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
+Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_4179a/fast"
 /usr/bin/make -f CMakeFiles/cmTC_4179a.dir/build.make CMakeFiles/cmTC_4179a.dir/build
-make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 Building CXX object CMakeFiles/cmTC_4179a.dir/CMakeCXXCompilerABI.cpp.o
 /usr/bin/c++      -o CMakeFiles/cmTC_4179a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
 Linking CXX executable cmTC_4179a
@@ -246,16 +246,16 @@ COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
 COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4179a' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
  /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVVkyig.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_4179a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_4179a.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp]
   ignore line: []
   ignore line: [Run Build Command:"/usr/bin/make" "cmTC_4179a/fast"]
   ignore line: [/usr/bin/make -f CMakeFiles/cmTC_4179a.dir/build.make CMakeFiles/cmTC_4179a.dir/build]
-  ignore line: [make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp']
+  ignore line: [make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp']
   ignore line: [Building CXX object CMakeFiles/cmTC_4179a.dir/CMakeCXXCompilerABI.cpp.o]
   ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_4179a.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Linking CXX executable cmTC_4179a]
@@ -336,17 +336,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
+Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_26e89/fast"
 /usr/bin/make -f CMakeFiles/cmTC_26e89.dir/build.make CMakeFiles/cmTC_26e89.dir/build
-make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 Building CXX object CMakeFiles/cmTC_26e89.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_26e89.dir/feature_tests.cxx.o -c /home/nick/work/panther_launcher/CMakeFiles/feature_tests.cxx
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_26e89.dir/feature_tests.cxx.o -c /home/nick/work/rocker_launcher/CMakeFiles/feature_tests.cxx
 Linking CXX executable cmTC_26e89
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26e89.dir/link.txt --verbose=1
 /usr/bin/c++        CMakeFiles/cmTC_26e89.dir/feature_tests.cxx.o  -o cmTC_26e89 -rdynamic 
-make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -409,17 +409,17 @@ make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
+Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_ac4b7/fast"
 /usr/bin/make -f CMakeFiles/cmTC_ac4b7.dir/build.make CMakeFiles/cmTC_ac4b7.dir/build
-make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 Building CXX object CMakeFiles/cmTC_ac4b7.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_ac4b7.dir/feature_tests.cxx.o -c /home/nick/work/panther_launcher/CMakeFiles/feature_tests.cxx
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_ac4b7.dir/feature_tests.cxx.o -c /home/nick/work/rocker_launcher/CMakeFiles/feature_tests.cxx
 Linking CXX executable cmTC_ac4b7
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac4b7.dir/link.txt --verbose=1
 /usr/bin/c++        CMakeFiles/cmTC_ac4b7.dir/feature_tests.cxx.o  -o cmTC_ac4b7 -rdynamic 
-make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -482,17 +482,17 @@ make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/nick/work/panther_launcher/CMakeFiles/CMakeTmp
+Change Dir: /home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_5e585/fast"
 /usr/bin/make -f CMakeFiles/cmTC_5e585.dir/build.make CMakeFiles/cmTC_5e585.dir/build
-make[1]: Entering directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 Building CXX object CMakeFiles/cmTC_5e585.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_5e585.dir/feature_tests.cxx.o -c /home/nick/work/panther_launcher/CMakeFiles/feature_tests.cxx
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_5e585.dir/feature_tests.cxx.o -c /home/nick/work/rocker_launcher/CMakeFiles/feature_tests.cxx
 Linking CXX executable cmTC_5e585
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e585.dir/link.txt --verbose=1
 /usr/bin/c++        CMakeFiles/cmTC_5e585.dir/feature_tests.cxx.o  -o cmTC_5e585 -rdynamic 
-make[1]: Leaving directory '/home/nick/work/panther_launcher/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/nick/work/rocker_launcher/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

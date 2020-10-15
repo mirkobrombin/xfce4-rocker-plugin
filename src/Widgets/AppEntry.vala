@@ -18,7 +18,7 @@
 
 using Gtk;
 
-public class Panther.Widgets.AppEntry : Gtk.Button {
+public class Rocker.Widgets.AppEntry : Gtk.Button {
     private static Gtk.Menu menu;
 
     public Gtk.Label app_label;
@@ -41,16 +41,6 @@ public class Panther.Widgets.AppEntry : Gtk.Button {
 
     private Backend.AppSystem app_system;
 
-#if HAS_PLANK
-    static construct {
-        plank_client = Plank.DBusClient.get_instance ();
-    }
-
-    private static Plank.DBusClient plank_client;
-    private bool docked = false;
-    private string desktop_uri;
-#endif
-
     public AppEntry (Backend.App app) {
         Gtk.TargetEntry dnd = {"text/uri-list", 0, 0};
         Gtk.drag_source_set (this, Gdk.ModifierType.BUTTON1_MASK, {dnd},
@@ -58,24 +48,21 @@ public class Panther.Widgets.AppEntry : Gtk.Button {
 
         desktop_id = app.desktop_id;
         desktop_path = app.desktop_path;
-#if HAS_PLANK
-        desktop_uri = File.new_for_path (desktop_path).get_uri ();
-#endif
 
         application = app;
         app_name = app.name;
         tooltip_text = app.description;
         exec_name = app.exec;
-        icon_size = Panther.settings.icon_size;
+        icon_size = Rocker.settings.icon_size;
         icon = app.icon;
 
         get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
 
-        if (Panther.settings.font_size <= 0.001) {
+        if (Rocker.settings.font_size <= 0.001) {
             app_label = new Gtk.Label (app_name);
             app_label.use_markup = false;
         } else {
-            var texto = "<span font_size=\"%d\">%s</span>".printf((int)(Panther.settings.font_size * 1000),app_name);
+            var texto = "<span font_size=\"%d\">%s</span>".printf((int)(Rocker.settings.font_size * 1000),app_name);
             app_label = new Gtk.Label(null);
             app_label.set_markup(texto);
         }
@@ -123,8 +110,8 @@ public class Panther.Widgets.AppEntry : Gtk.Button {
 
         this.drag_end.connect ( () => {
             this.dragging = false;
-            var panther_app = (Gtk.Application) GLib.Application.get_default ();
-            ((PantherView)panther_app.active_window).grab_device ();
+            var rocker_app = (Gtk.Application) GLib.Application.get_default ();
+            ((RockerView)rocker_app.active_window).grab_device ();
         });
 
         this.drag_data_get.connect ( (ctx, sel, info, time) => {
@@ -167,8 +154,8 @@ public class Panther.Widgets.AppEntry : Gtk.Button {
 
         // Showing a menu reverts the effect of the grab_device function.
         menu.hide.connect (() => {
-            var panther_app = (Gtk.Application) GLib.Application.get_default ();
-            ((PantherView)panther_app.active_window).grab_device ();
+            var rocker_app = (Gtk.Application) GLib.Application.get_default ();
+            ((RockerView)rocker_app.active_window).grab_device ();
         });
         foreach (var action in application.actions) {
             var menuitem = new Gtk.MenuItem.with_mnemonic (action);
@@ -189,52 +176,12 @@ public class Panther.Widgets.AppEntry : Gtk.Button {
 
         menu.add(get_saved_menuitem ());
 
-#if HAS_PLANK
-        if (plank_client != null && plank_client.is_connected) {
-            if (menu.get_children ().length () > 0)
-                menu.add (new Gtk.SeparatorMenuItem ());
-
-            menu.add (get_plank_menuitem ());
-        }
-        else {
-          message("Not connected: " + plank_client.is_connected.to_string ());
-        }
-#endif
-
         menu.show_all ();
     }
 
-#if HAS_PLANK
-    private Gtk.MenuItem get_plank_menuitem () {
-        docked = (desktop_uri in plank_client.get_persistent_applications ());
-
-        var plank_menuitem = new Gtk.MenuItem ();
-        plank_menuitem.set_use_underline (true);
-
-        if (docked)
-            plank_menuitem.set_label (_("Remove from _Dock"));
-        else
-            plank_menuitem.set_label (_("Pin to _Dock"));
-
-        plank_menuitem.activate.connect (plank_menuitem_activate);
-
-        return plank_menuitem;
-    }
-
-    private void plank_menuitem_activate () {
-        if (plank_client == null || !plank_client.is_connected)
-            return;
-
-        if (docked)
-            plank_client.remove_item (desktop_uri);
-        else
-            plank_client.add_item (desktop_uri);
-    }
-#endif
   private Gtk.MenuItem get_saved_menuitem () {
-      //docked = (desktop_uri in plank_client.get_persistent_applications ());
-      var panther_app = (Gtk.Application) GLib.Application.get_default ();
-      bool saved = ((PantherView)panther_app.active_window).cat_saved;
+      var rocker_app = (Gtk.Application) GLib.Application.get_default ();
+      bool saved = ((RockerView)rocker_app.active_window).cat_saved;
 
       var saved_menuitem = new Gtk.MenuItem ();
       saved_menuitem.set_use_underline (true);
@@ -252,8 +199,8 @@ public class Panther.Widgets.AppEntry : Gtk.Button {
   }
 
   private void saved_menuitem_activate () {
-    var panther_app = (Gtk.Application) GLib.Application.get_default ();
-    bool saved = ((PantherView)panther_app.active_window).cat_saved;
+    var rocker_app = (Gtk.Application) GLib.Application.get_default ();
+    bool saved = ((RockerView)rocker_app.active_window).cat_saved;
 
     if(saved)
       remove_saved_item ();
@@ -267,7 +214,7 @@ public class Panther.Widgets.AppEntry : Gtk.Button {
 
     if (target_dir == null)
     {
-      target_dir = File.new_for_path (Environment.get_user_config_dir () + "/panther/saved/");
+      target_dir = File.new_for_path (Environment.get_user_config_dir () + "/rocker/saved/");
 
       if (!target_dir.query_exists ())
 				try {
@@ -301,8 +248,8 @@ public class Panther.Widgets.AppEntry : Gtk.Button {
           stream.put_string (file.to_data ());
           stream.close ();
 
-          var panther_app = (Gtk.Application) GLib.Application.get_default ();
-          ((PantherView)panther_app.active_window).add_saved (basename);
+          var rocker_app = (Gtk.Application) GLib.Application.get_default ();
+          ((RockerView)rocker_app.active_window).add_saved (basename);
         }
       } catch (Error e){
         warning(e.message);
@@ -316,7 +263,7 @@ public class Panther.Widgets.AppEntry : Gtk.Button {
     File saved_file = null;
 
     if (target_dir == null)
-      target_dir = File.new_for_path (Environment.get_home_dir () + "/.config/panther/saved/");
+      target_dir = File.new_for_path (Environment.get_home_dir () + "/.config/rocker/saved/");
 
     bool is_valid = false;
     string basename;
@@ -333,8 +280,8 @@ public class Panther.Widgets.AppEntry : Gtk.Button {
       try{
         saved_file.delete ();
 
-        var panther_app = (Gtk.Application) GLib.Application.get_default ();
-        ((PantherView)panther_app.active_window).add_saved (basename);
+        var rocker_app = (Gtk.Application) GLib.Application.get_default ();
+        ((RockerView)rocker_app.active_window).add_saved (basename);
 
       } catch (Error e){
         warning(e.message);

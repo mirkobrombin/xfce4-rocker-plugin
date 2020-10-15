@@ -18,7 +18,7 @@
 
 using Gtk;
 
-namespace Panther.Widgets {
+namespace Rocker.Widgets {
 
 	public class UserView : Gtk.Box {
 
@@ -32,8 +32,8 @@ namespace Panther.Widgets {
 			button = new Gtk.Button();
 
 			name = new Gtk.Label ("Nick");
-			face = new Gtk.Image.from_pixbuf(new Gdk.Pixbuf.from_file_at_scale ("/home/nick/.face", Panther.settings.icon_size,
-                                                                     Panther.settings.icon_size, true));
+			face = new Gtk.Image.from_pixbuf(new Gdk.Pixbuf.from_file_at_scale ("/home/nick/.face", Rocker.settings.icon_size,
+                                                                     Rocker.settings.icon_size, true));
 
 			button.set_image(face);
 			button.set_image_position(Gtk.PositionType.LEFT);

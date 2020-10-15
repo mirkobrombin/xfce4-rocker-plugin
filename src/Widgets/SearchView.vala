@@ -18,7 +18,7 @@
 
 using Gtk;
 
-namespace Panther.Widgets {
+namespace Rocker.Widgets {
 
     public class SearchView : Gtk.ScrolledWindow {
         const int MAX_RESULTS = 20;
@@ -81,9 +81,9 @@ namespace Panther.Widgets {
 
         public signal void app_launched ();
 
-        private PantherView view;
+        private RockerView view;
 
-        public SearchView (PantherView parent) {
+        public SearchView (RockerView parent) {
             view = parent;
             hscrollbar_policy = Gtk.PolicyType.NEVER;
             items = new Gee.HashMap<Backend.App, SearchItem> ();
@@ -353,7 +353,7 @@ namespace Panther.Widgets {
         /**
          * Launch selected app
          *
-         * @return indicates whether panther should now be hidden
+         * @return indicates whether rocker should now be hidden
          */
         public bool launch_selected () {
             if (selected_app.action) {

@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 //
-//  Copyright (C) 2011-2012 Panther Developers
+//  Copyright (C) 2011-2012 Rocker Developers
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 
 using Gtk;
 
-public class Panther.Backend.AppSystem : Object {
+public class Rocker.Backend.AppSystem : Object {
 
     const string GCC_PANEL_CATEGORY = "X-GNOME-Settings-Panel";
 
@@ -38,7 +38,7 @@ public class Panther.Backend.AppSystem : Object {
         rl_service.update_complete.connect (update_popularity);
 #endif
 
-        apps_menu = new GMenu.Tree ("panther-applications.menu", GMenu.TreeFlags.INCLUDE_EXCLUDED | GMenu.TreeFlags.SORT_DISPLAY_NAME);
+        apps_menu = new GMenu.Tree ("rocker-applications.menu", GMenu.TreeFlags.INCLUDE_EXCLUDED | GMenu.TreeFlags.SORT_DISPLAY_NAME);
         apps_menu.changed.connect (update_app_system);
 
         apps = new Gee.HashMap<string, Gee.ArrayList<App>> ();
@@ -101,7 +101,7 @@ public class Panther.Backend.AppSystem : Object {
 		{
 			var result = new Gee.ArrayList<App> ();
       var config = File.new_for_path (Environment.get_user_config_dir ());
-      config = config.get_child ("panther");
+      config = config.get_child ("rocker");
       File source_dir = config.get_child ("saved");
 
       if (source_dir.query_exists ()) {

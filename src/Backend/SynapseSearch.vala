@@ -18,7 +18,7 @@
 
 using Soup;
 
-namespace Panther.Backend {
+namespace Rocker.Backend {
 
     public class SynapseSearch : Object {
 

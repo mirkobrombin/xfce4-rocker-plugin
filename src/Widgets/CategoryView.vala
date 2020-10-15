@@ -18,14 +18,14 @@
 
 using Gtk;
 
-public class Panther.Widgets.CategoryView : Gtk.EventBox {
+public class Rocker.Widgets.CategoryView : Gtk.EventBox {
 
     private Gtk.Grid container;
     public Sidebar category_switcher;
     public UserView user_view;
     public Gtk.Separator separator;
     public Widgets.Grid app_view;
-    private PantherView view;
+    private RockerView view;
 
     private const string ALL_APPLICATIONS = _("All Applications");
     private const string NEW_FILTER = _("Create a new Filter");
@@ -35,7 +35,7 @@ public class Panther.Widgets.CategoryView : Gtk.EventBox {
 
     public Gee.HashMap<int, string> category_ids = new Gee.HashMap<int, string> ();
 
-    public CategoryView (PantherView parent) {
+    public CategoryView (RockerView parent) {
         view = parent;
         set_visible_window (false);
         hexpand = true;

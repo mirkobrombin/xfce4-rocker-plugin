@@ -1,4 +1,4 @@
-namespace Panther.Pixels {
+namespace Rocker.Pixels {
     const int PADDING = 25;
     const int ROW_SPACING = 10;
     const int BOTTOM_SPACE = 128;

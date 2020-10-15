@@ -1,4 +1,4 @@
-# Install script for directory: /home/nick/work/panther_launcher/data
+# Install script for directory: /home/nick/work/rocker_launcher/data
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,30 +34,30 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/etc/xdg/menus/panther-applications.menu")
+   "/etc/xdg/menus/rocker-applications.menu")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/etc/xdg/menus" TYPE FILE FILES "/home/nick/work/panther_launcher/data/panther-applications.menu")
+file(INSTALL DESTINATION "/etc/xdg/menus" TYPE FILE FILES "/home/nick/work/rocker_launcher/data/rocker-applications.menu")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dbus-1/services" TYPE FILE FILES "/home/nick/work/panther_launcher/data/com.rastersoft.panther.remotecontrol.service")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dbus-1/services" TYPE FILE FILES "/home/nick/work/rocker_launcher/data/pm.mirko.rocker.remotecontrol.service")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/local/share/glib-2.0/schemas/org.rastersoft.panther.gschema.xml")
+   "/usr/local/share/glib-2.0/schemas/pm.mirko.rocker.gschema.xml")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local/share/glib-2.0/schemas" TYPE FILE OPTIONAL FILES "/home/nick/work/panther_launcher/data/org.rastersoft.panther.gschema.xml")
+file(INSTALL DESTINATION "/usr/local/share/glib-2.0/schemas" TYPE FILE OPTIONAL FILES "/home/nick/work/rocker_launcher/data/pm.mirko.rocker.gschema.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

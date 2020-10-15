@@ -1,4 +1,4 @@
-# Install script for directory: /home/nick/work/panther_launcher/data/icons
+# Install script for directory: /home/nick/work/rocker_launcher/data/icons
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,15 +33,15 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/status" TYPE FILE FILES "/home/nick/work/panther_launcher/data/icons/panther-categories-symbolic.svg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/status" TYPE FILE FILES "/home/nick/work/rocker_launcher/data/icons/rocker-categories-symbolic.svg")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/status" TYPE FILE FILES "/home/nick/work/panther_launcher/data/icons/panther-icons-symbolic.svg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/status" TYPE FILE FILES "/home/nick/work/rocker_launcher/data/icons/rocker-icons-symbolic.svg")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/status" TYPE FILE FILES "/home/nick/work/panther_launcher/data/icons/more.png")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/status" TYPE FILE FILES "/home/nick/work/rocker_launcher/data/icons/more.png")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

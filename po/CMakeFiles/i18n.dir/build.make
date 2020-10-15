@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nick/work/panther_launcher
+CMAKE_SOURCE_DIR = /home/nick/work/rocker_launcher
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nick/work/panther_launcher
+CMAKE_BINARY_DIR = /home/nick/work/rocker_launcher
 
 # Utility rule file for i18n.
 
@@ -54,80 +54,80 @@ CMAKE_BINARY_DIR = /home/nick/work/panther_launcher
 include po/CMakeFiles/i18n.dir/progress.make
 
 i18n: po/CMakeFiles/i18n.dir/build.make
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/lo.mo /home/nick/work/panther_launcher/po/lo.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/zh_CN.mo /home/nick/work/panther_launcher/po/zh_CN.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ja.mo /home/nick/work/panther_launcher/po/ja.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/fr.mo /home/nick/work/panther_launcher/po/fr.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/hu.mo /home/nick/work/panther_launcher/po/hu.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/uk.mo /home/nick/work/panther_launcher/po/uk.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/lb.mo /home/nick/work/panther_launcher/po/lb.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/rue.mo /home/nick/work/panther_launcher/po/rue.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/de.mo /home/nick/work/panther_launcher/po/de.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/az.mo /home/nick/work/panther_launcher/po/az.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/el.mo /home/nick/work/panther_launcher/po/el.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/nb.mo /home/nick/work/panther_launcher/po/nb.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/lt.mo /home/nick/work/panther_launcher/po/lt.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ast.mo /home/nick/work/panther_launcher/po/ast.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/eo.mo /home/nick/work/panther_launcher/po/eo.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/da.mo /home/nick/work/panther_launcher/po/da.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ko.mo /home/nick/work/panther_launcher/po/ko.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ka.mo /home/nick/work/panther_launcher/po/ka.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/pt.mo /home/nick/work/panther_launcher/po/pt.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/te.mo /home/nick/work/panther_launcher/po/te.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/et.mo /home/nick/work/panther_launcher/po/et.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/sma.mo /home/nick/work/panther_launcher/po/sma.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/lv.mo /home/nick/work/panther_launcher/po/lv.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ta.mo /home/nick/work/panther_launcher/po/ta.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/pt_BR.mo /home/nick/work/panther_launcher/po/pt_BR.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/bs.mo /home/nick/work/panther_launcher/po/bs.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/fi.mo /home/nick/work/panther_launcher/po/fi.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ru.mo /home/nick/work/panther_launcher/po/ru.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ckb.mo /home/nick/work/panther_launcher/po/ckb.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/cs.mo /home/nick/work/panther_launcher/po/cs.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/sq.mo /home/nick/work/panther_launcher/po/sq.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ml.mo /home/nick/work/panther_launcher/po/ml.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/id.mo /home/nick/work/panther_launcher/po/id.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/be.mo /home/nick/work/panther_launcher/po/be.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/nn.mo /home/nick/work/panther_launcher/po/nn.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/en_GB.mo /home/nick/work/panther_launcher/po/en_GB.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/sr@latin.mo /home/nick/work/panther_launcher/po/sr@latin.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/gl.mo /home/nick/work/panther_launcher/po/gl.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/pl.mo /home/nick/work/panther_launcher/po/pl.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/en_CA.mo /home/nick/work/panther_launcher/po/en_CA.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/sr.mo /home/nick/work/panther_launcher/po/sr.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/en_AU.mo /home/nick/work/panther_launcher/po/en_AU.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/es.mo /home/nick/work/panther_launcher/po/es.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/fa.mo /home/nick/work/panther_launcher/po/fa.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/my.mo /home/nick/work/panther_launcher/po/my.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/sk.mo /home/nick/work/panther_launcher/po/sk.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/tr.mo /home/nick/work/panther_launcher/po/tr.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/af.mo /home/nick/work/panther_launcher/po/af.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/sw.mo /home/nick/work/panther_launcher/po/sw.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ky.mo /home/nick/work/panther_launcher/po/ky.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/si.mo /home/nick/work/panther_launcher/po/si.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ms.mo /home/nick/work/panther_launcher/po/ms.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/am.mo /home/nick/work/panther_launcher/po/am.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/bn.mo /home/nick/work/panther_launcher/po/bn.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/hy.mo /home/nick/work/panther_launcher/po/hy.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/bg.mo /home/nick/work/panther_launcher/po/bg.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/it.mo /home/nick/work/panther_launcher/po/it.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/mr.mo /home/nick/work/panther_launcher/po/mr.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/th.mo /home/nick/work/panther_launcher/po/th.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/hi.mo /home/nick/work/panther_launcher/po/hi.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/zh_HK.mo /home/nick/work/panther_launcher/po/zh_HK.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ca.mo /home/nick/work/panther_launcher/po/ca.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/nl.mo /home/nick/work/panther_launcher/po/nl.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/zh_TW.mo /home/nick/work/panther_launcher/po/zh_TW.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/fr_CA.mo /home/nick/work/panther_launcher/po/fr_CA.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/eu.mo /home/nick/work/panther_launcher/po/eu.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/vi.mo /home/nick/work/panther_launcher/po/vi.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/he.mo /home/nick/work/panther_launcher/po/he.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/hr.mo /home/nick/work/panther_launcher/po/hr.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ro.mo /home/nick/work/panther_launcher/po/ro.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/sl.mo /home/nick/work/panther_launcher/po/sl.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/sv.mo /home/nick/work/panther_launcher/po/sv.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/is.mo /home/nick/work/panther_launcher/po/is.po
-	cd /home/nick/work/panther_launcher/po && /usr/bin/msgfmt -o /home/nick/work/panther_launcher/po/ar.mo /home/nick/work/panther_launcher/po/ar.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/lo.mo /home/nick/work/rocker_launcher/po/lo.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/zh_CN.mo /home/nick/work/rocker_launcher/po/zh_CN.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ja.mo /home/nick/work/rocker_launcher/po/ja.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/fr.mo /home/nick/work/rocker_launcher/po/fr.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/hu.mo /home/nick/work/rocker_launcher/po/hu.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/uk.mo /home/nick/work/rocker_launcher/po/uk.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/lb.mo /home/nick/work/rocker_launcher/po/lb.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/rue.mo /home/nick/work/rocker_launcher/po/rue.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/de.mo /home/nick/work/rocker_launcher/po/de.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/az.mo /home/nick/work/rocker_launcher/po/az.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/el.mo /home/nick/work/rocker_launcher/po/el.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/nb.mo /home/nick/work/rocker_launcher/po/nb.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/lt.mo /home/nick/work/rocker_launcher/po/lt.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ast.mo /home/nick/work/rocker_launcher/po/ast.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/eo.mo /home/nick/work/rocker_launcher/po/eo.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/da.mo /home/nick/work/rocker_launcher/po/da.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ko.mo /home/nick/work/rocker_launcher/po/ko.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ka.mo /home/nick/work/rocker_launcher/po/ka.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/pt.mo /home/nick/work/rocker_launcher/po/pt.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/te.mo /home/nick/work/rocker_launcher/po/te.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/et.mo /home/nick/work/rocker_launcher/po/et.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/sma.mo /home/nick/work/rocker_launcher/po/sma.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/lv.mo /home/nick/work/rocker_launcher/po/lv.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ta.mo /home/nick/work/rocker_launcher/po/ta.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/pt_BR.mo /home/nick/work/rocker_launcher/po/pt_BR.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/bs.mo /home/nick/work/rocker_launcher/po/bs.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/fi.mo /home/nick/work/rocker_launcher/po/fi.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ru.mo /home/nick/work/rocker_launcher/po/ru.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ckb.mo /home/nick/work/rocker_launcher/po/ckb.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/cs.mo /home/nick/work/rocker_launcher/po/cs.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/sq.mo /home/nick/work/rocker_launcher/po/sq.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ml.mo /home/nick/work/rocker_launcher/po/ml.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/id.mo /home/nick/work/rocker_launcher/po/id.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/be.mo /home/nick/work/rocker_launcher/po/be.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/nn.mo /home/nick/work/rocker_launcher/po/nn.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/en_GB.mo /home/nick/work/rocker_launcher/po/en_GB.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/sr@latin.mo /home/nick/work/rocker_launcher/po/sr@latin.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/gl.mo /home/nick/work/rocker_launcher/po/gl.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/pl.mo /home/nick/work/rocker_launcher/po/pl.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/en_CA.mo /home/nick/work/rocker_launcher/po/en_CA.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/sr.mo /home/nick/work/rocker_launcher/po/sr.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/en_AU.mo /home/nick/work/rocker_launcher/po/en_AU.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/es.mo /home/nick/work/rocker_launcher/po/es.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/fa.mo /home/nick/work/rocker_launcher/po/fa.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/my.mo /home/nick/work/rocker_launcher/po/my.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/sk.mo /home/nick/work/rocker_launcher/po/sk.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/tr.mo /home/nick/work/rocker_launcher/po/tr.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/af.mo /home/nick/work/rocker_launcher/po/af.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/sw.mo /home/nick/work/rocker_launcher/po/sw.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ky.mo /home/nick/work/rocker_launcher/po/ky.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/si.mo /home/nick/work/rocker_launcher/po/si.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ms.mo /home/nick/work/rocker_launcher/po/ms.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/am.mo /home/nick/work/rocker_launcher/po/am.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/bn.mo /home/nick/work/rocker_launcher/po/bn.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/hy.mo /home/nick/work/rocker_launcher/po/hy.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/bg.mo /home/nick/work/rocker_launcher/po/bg.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/it.mo /home/nick/work/rocker_launcher/po/it.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/mr.mo /home/nick/work/rocker_launcher/po/mr.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/th.mo /home/nick/work/rocker_launcher/po/th.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/hi.mo /home/nick/work/rocker_launcher/po/hi.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/zh_HK.mo /home/nick/work/rocker_launcher/po/zh_HK.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ca.mo /home/nick/work/rocker_launcher/po/ca.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/nl.mo /home/nick/work/rocker_launcher/po/nl.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/zh_TW.mo /home/nick/work/rocker_launcher/po/zh_TW.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/fr_CA.mo /home/nick/work/rocker_launcher/po/fr_CA.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/eu.mo /home/nick/work/rocker_launcher/po/eu.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/vi.mo /home/nick/work/rocker_launcher/po/vi.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/he.mo /home/nick/work/rocker_launcher/po/he.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/hr.mo /home/nick/work/rocker_launcher/po/hr.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ro.mo /home/nick/work/rocker_launcher/po/ro.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/sl.mo /home/nick/work/rocker_launcher/po/sl.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/sv.mo /home/nick/work/rocker_launcher/po/sv.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/is.mo /home/nick/work/rocker_launcher/po/is.po
+	cd /home/nick/work/rocker_launcher/po && /usr/bin/msgfmt -o /home/nick/work/rocker_launcher/po/ar.mo /home/nick/work/rocker_launcher/po/ar.po
 .PHONY : i18n
 
 # Rule to build all files generated by this target.
@@ -136,10 +136,10 @@ po/CMakeFiles/i18n.dir/build: i18n
 .PHONY : po/CMakeFiles/i18n.dir/build
 
 po/CMakeFiles/i18n.dir/clean:
-	cd /home/nick/work/panther_launcher/po && $(CMAKE_COMMAND) -P CMakeFiles/i18n.dir/cmake_clean.cmake
+	cd /home/nick/work/rocker_launcher/po && $(CMAKE_COMMAND) -P CMakeFiles/i18n.dir/cmake_clean.cmake
 .PHONY : po/CMakeFiles/i18n.dir/clean
 
 po/CMakeFiles/i18n.dir/depend:
-	cd /home/nick/work/panther_launcher && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nick/work/panther_launcher /home/nick/work/panther_launcher/po /home/nick/work/panther_launcher /home/nick/work/panther_launcher/po /home/nick/work/panther_launcher/po/CMakeFiles/i18n.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nick/work/rocker_launcher && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nick/work/rocker_launcher /home/nick/work/rocker_launcher/po /home/nick/work/rocker_launcher /home/nick/work/rocker_launcher/po /home/nick/work/rocker_launcher/po/CMakeFiles/i18n.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : po/CMakeFiles/i18n.dir/depend
 
