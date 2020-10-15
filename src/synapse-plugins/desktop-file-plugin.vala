@@ -138,14 +138,14 @@ namespace Synapse
     construct
     {
       desktop_files = new Gee.ArrayList<DesktopFileMatch> ();
-      mimetype_map = new Gee.HashMap<string, OpenWithAction> ();
+      //mimetype_map = new Gee.HashMap<string, OpenWithAction> ();
 
       var dfs = DesktopFileService.get_default ();
       dfs.reload_started.connect (() => {
         loading_in_progress = true;
       });
       dfs.reload_done.connect (() => {
-        mimetype_map.clear ();
+        //mimetype_map.clear ();
         desktop_files.clear ();
         load_all_desktop_files.begin ();
       });

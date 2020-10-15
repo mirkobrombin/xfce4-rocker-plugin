@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mirko/Projects/rocker-launcher/build/src/Xfce4RockerPlugin.c
+glib-object.h
+-
+gio/gio.h
+-
+glib.h
+-
+string.h
+-
+gtk/gtk.h
+-
+libxfce4panel/libxfce4panel.h
+/home/mirko/Projects/rocker-launcher/build/src/libxfce4panel/libxfce4panel.h
+

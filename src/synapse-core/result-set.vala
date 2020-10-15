@@ -20,7 +20,7 @@
 
 namespace Synapse
 {
-  public class ResultSet : Object, Gee.Traversable<Match>, Gee.Iterable <Gee.Map.Entry <Match, int>>
+  public class ResultSet : Object, Gee.Traversable<Match>
   {
     protected Gee.Map<Match, int> matches;
     protected Gee.Set<unowned string> uris;
@@ -57,10 +57,10 @@ namespace Synapse
       owned get { return matches.entries; }
     }
 
-    public Gee.Iterator<Gee.Map.Entry <Match, int>?> iterator ()
+    /*public Gee.Iterator<Gee.Map.Entry <Match, int>?> iterator ()
     {
       return matches.iterator ();
-    }
+    }*/
 
     public bool foreach (Gee.ForallFunc<Match> func)
     {

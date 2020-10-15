@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+e3a7fce8a328c2377d5f6b992a041902 src/Config.c
+e3a7fce8a328c2377d5f6b992a041902 src/Xfce4RockerPlugin.c
+f044a90fcd401b64c412730a56e1b05b src/rocker_launcher__valac.stamp
+451276c222a85b978f894d68eddf180f src/rockerplugin_valac.stamp

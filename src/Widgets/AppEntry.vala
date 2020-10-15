@@ -25,6 +25,7 @@ public class Rocker.Widgets.AppEntry : Gtk.Button {
     private Gdk.Pixbuf icon;
     private new Gtk.Image image;
 
+    public string desktop_uri;
     public string exec_name;
     public string app_name;
     public string desktop_id;

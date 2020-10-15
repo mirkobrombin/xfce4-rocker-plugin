@@ -32,7 +32,6 @@ public class Rocker.Rocker : Gtk.Application {
     public static bool command_mode = false;
     public bool launched = false;
     public Gtk.ToggleButton app_button;
-    public TestClient client;
 
     public static Settings settings { get; private set; default = null; }
     public static Gtk.IconTheme icon_theme { get; set; default = null; }
