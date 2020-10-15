@@ -13,6 +13,7 @@ libxfce4panel
 libxfce4util
 libxfconf
 libgee
+vala
 ```
 
 ### Build and install 
