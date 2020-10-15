@@ -21,7 +21,7 @@ interface Rocker_Service : Object {
   public signal void visibility_changed (bool launcher_visible);
 }
 
-Gtk.ToggleButton app_button;
+Gtk.Button app_button;
 
 namespace Rocker {
 
@@ -46,8 +46,9 @@ namespace Rocker {
 
     public override void @construct() {
 
-        app_button = new Gtk.ToggleButton.with_label ("Applications");
-        app_button.set_relief(Gtk.ReliefStyle.NONE);
+        app_button = new Gtk.Button.with_label ("Applications");
+        //app_button.set_relief(Gtk.ReliefStyle.NONE);
+        // `Gtk.Button.set_focus_on_click' has been deprecated since 3.20
         //app_button.set_focus_on_click(false);
         add (app_button);
         add_action_widget (app_button);
@@ -57,34 +58,33 @@ namespace Rocker {
         rocker_bus = Bus.get_proxy_sync (BusType.SESSION, "pm.mirko.rocker",
                                                         "/pm/mirko//rocker");
 
-        app_button.toggled.connect (() => {
-          if (app_button.active) {
-              try {
-      					Process.spawn_command_line_async ("rocker_launcher");
-                //remote_bus.do_show ();
-      				} catch (Error e) {
-      					warning (e.message);
-      				}
+        app_button.clicked.connect (() => {
+            try {
+              Process.spawn_command_line_async ("rocker_launcher");
+              //remote_bus.do_show ();
+            } catch (Error e) {
+              warning (e.message);
             }
         });
 
+        /*
         try{
           rocker_bus.visibility_changed.connect ((visible) => {
               if(!visible)
                 app_button.set_active(visible);
               else {
-                //app_button.set_active(visible);
+                app_button.set_active(visible);
               }
           });
         } catch (Error e) {
           warning (e.message);
         }
-
+        */
     		menu_show_about ();
     		about.connect (() => {
     				Gtk.show_about_dialog (null,
     					"program-name", "Rocker Launcher",
-    					"comments", "A fork from Slingshot Launcher. Its main change is that it doesn't depend on Gala, Granite or other libraries not available in regular linux distros. It also has been ported to Autovala, allowing an easier build. Finally, it also has an applet for Gnome Flashback and an extension for Gnome Shell, allowing to use it from these desktops.",
+    					"comments", "A fork from Panther Launcher. Its main change is that it doesn't depend on Gala, Granite, Plank and works on latest xfce releases.",
     					null);
     			});
 
