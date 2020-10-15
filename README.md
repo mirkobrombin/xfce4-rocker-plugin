@@ -1,37 +1,34 @@
 # Rocker Launcher
 
-A fork of a fork originally 'Slingshot Launcher' by the elementary team
+A Slingshot fork that works on Xfce without gala, granite and plank support.
 
-Changed to work with Xfce Panel with added functionality such as being able to 'Save' items
+![](https://git.mirko.pm/brombinmirko/rocker-launcher/-/raw/master/screenshot.png)
 
-![rocker](https://i.imgur.com/pIFgCJh.png)
-
-## Installing and Running 
 
 ### Dependencies 
 
-	libgnome-menu-3-dev 
-	libxfce4panel-2.0-dev 
-	libxfce4util-dev
-	libxfconf-0-dev
+```
+libgnome-menu-3-dev 
+libxfce4panel-2.0-dev 
+libxfce4util-dev
+libxfconf-0-dev
+```
 
 ### Build and install 
+```
+mkdir build
+cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+make
+sudo make install
+./src/rocker_launcher
+```
 
-Just type from a command line:
-
-	mkdir build
-	cd build
-	cmake .. -DCMAKE_INSTALL_PREFIX=/usr
-	make
-	sudo make install
-	./src/rocker_launcher
-
-## Changing the location of the launcher's window
-
-It is possible to move the window to the bottom part of the screen. To do so,
-just use *dconf* to set *pm.mirko.rocker.show-at-top* to *false*.
+## Configuration
+By default category view is disabled. Use `dconf` to enable, configs are stored in `pm.mirko.rocker`.
 
 ## Credits
-Mirko Brombin <send@mirko.pm>
-Original work (slingshot_gnome) by Raster Software Vigo (rastersoft)
-Fork from EnsoOS version, without Plank support.
+
+Original work (slingshot_gnome) by Raster Software Vigo (rastersoft) 
+
+Special thanks to Panther fork for initial xfce4 support.
