@@ -34,17 +34,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nick/work/rocker_launcher/src/Backend/cmake_install.cmake")
-  include("/home/nick/work/rocker_launcher/po/cmake_install.cmake")
-  include("/home/nick/work/rocker_launcher/src/synapse-core/cmake_install.cmake")
-  include("/home/nick/work/rocker_launcher/rocker_applet/cmake_install.cmake")
-  include("/home/nick/work/rocker_launcher/data/cmake_install.cmake")
-  include("/home/nick/work/rocker_launcher/src/synapse-plugins/cmake_install.cmake")
-  include("/home/nick/work/rocker_launcher/data/icons/cmake_install.cmake")
-  include("/home/nick/work/rocker_launcher/rocker_mate/cmake_install.cmake")
-  include("/home/nick/work/rocker_launcher/rocker_gnome_shell/cmake_install.cmake")
-  include("/home/nick/work/rocker_launcher/src/Widgets/cmake_install.cmake")
-  include("/home/nick/work/rocker_launcher/src/cmake_install.cmake")
+  include("src/Backend/cmake_install.cmake")
+  include("po/cmake_install.cmake")
+  include("src/synapse-core/cmake_install.cmake")
+  include("rocker_applet/cmake_install.cmake")
+  include("data/cmake_install.cmake")
+  include("src/synapse-plugins/cmake_install.cmake")
+  include("data/icons/cmake_install.cmake")
+  include("rocker_mate/cmake_install.cmake")
+  include("rocker_gnome_shell/cmake_install.cmake")
+  include("src/Widgets/cmake_install.cmake")
+  include("src/cmake_install.cmake")
 
 endif()
 
@@ -56,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nick/work/rocker_launcher/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

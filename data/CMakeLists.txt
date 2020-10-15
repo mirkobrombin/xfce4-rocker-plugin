@@ -17,6 +17,7 @@ ELSE()
 ENDIF()
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/rocker-launcher.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/xfce4/panel/plugins/)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/icons/rocker-icon.svg DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/pm.mirko.rocker.remotecontrol.service ${CMAKE_CURRENT_BINARY_DIR}/pm.mirko.rocker.remotecontrol.service)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/pm.mirko.rocker.remotecontrol.service DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/dbus-1/services/)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/pm.mirko.rocker.remotecontrol.service.base ${CMAKE_CURRENT_BINARY_DIR}/pm.mirko.rocker.remotecontrol.service)

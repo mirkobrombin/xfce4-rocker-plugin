@@ -46,7 +46,11 @@ namespace Rocker {
 
     public override void @construct() {
 
-        app_button = new Gtk.Button.with_label ("Applications");
+        app_button = new Gtk.Button();
+        app_button.set_tooltip_text("Applications");
+        var image = new Gtk.Image.from_icon_name ("rocker-icon", Gtk.IconSize.MENU);
+        app_button.set_image(image);
+        
         //app_button.set_relief(Gtk.ReliefStyle.NONE);
         // `Gtk.Button.set_focus_on_click' has been deprecated since 3.20
         //app_button.set_focus_on_click(false);
