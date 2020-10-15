@@ -2,7 +2,7 @@
 
 A Slingshot fork that works on Xfce without gala, granite and plank support.
 
-![](https://git.mirko.pm/brombinmirko/rocker-launcher/-/raw/master/screenshot.png)
+![](https://git.mirko.pm/brombinmirko/xfce4-rocker-plugin/-/raw/master/screenshot.png)
 
 
 ### Dependencies 
@@ -21,7 +21,7 @@ cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=/usr
 make
 sudo make install
-./src/rocker_launcher
+./src/rocker
 ```
 
 ## Configuration

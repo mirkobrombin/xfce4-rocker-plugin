@@ -2,9 +2,9 @@
 ### Do not edit
 
 set (DATADIR "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_DATAROOTDIR}")
-set (PKGDATADIR "${DATADIR}/rocker_launcher")
-set (GETTEXT_PACKAGE "rocker_launcher")
-set (RELEASE_NAME "rocker_launcher")
+set (PKGDATADIR "${DATADIR}/rocker")
+set (GETTEXT_PACKAGE "rocker")
+set (RELEASE_NAME "rocker")
 set (CMAKE_C_FLAGS "")
 set (PREFIX ${CMAKE_INSTALL_PREFIX})
 set (VERSION "1.12.0")
@@ -130,7 +130,7 @@ add_library (rockerplugin SHARED
 include_directories(${GTK+_INCLUDE_DIRS} ${XFCE_INCLUDE_DIRS})
 target_link_libraries( rockerplugin ${GTK+_LIBRARIES} ${XFCE_LIBRARIES} -lm )
 
-vala_precompile(VALA_C rocker_launcher
+vala_precompile(VALA_C rocker
 	${APP_SOURCES}
 PACKAGES
 	${VALA_PACKAGES}
@@ -138,8 +138,8 @@ OPTIONS
 	${COMPILE_OPTIONS}
 )
 
-add_executable(rocker_launcher ${VALA_C})
-target_link_libraries( rocker_launcher m )
+add_executable(rocker ${VALA_C})
+target_link_libraries( rocker m )
 
 install(TARGETS
 	rockerplugin
@@ -148,14 +148,14 @@ DESTINATION
 )
 
 install(TARGETS
-	rocker_launcher
+	rocker
 RUNTIME DESTINATION
 	${CMAKE_INSTALL_BINDIR}
 )
 
 if(HAVE_VALADOC)
-	valadoc(rocker_launcher
-		${CMAKE_BINARY_DIR}/valadoc/rocker_launcher
+	valadoc(rocker
+		${CMAKE_BINARY_DIR}/valadoc/rocker
 		${APP_SOURCES}
 	PACKAGES
 		${VALA_PACKAGES}
@@ -165,6 +165,6 @@ if(HAVE_VALADOC)
 	install(DIRECTORY
 		${CMAKE_BINARY_DIR}/valadoc
 	DESTINATION
-		${CMAKE_INSTALL_DATAROOTDIR}/doc/rocker_launcher
+		${CMAKE_INSTALL_DATAROOTDIR}/doc/rocker
 	)
 endif()

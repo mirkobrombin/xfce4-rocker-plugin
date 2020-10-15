@@ -64,7 +64,7 @@ namespace Rocker {
 
         app_button.clicked.connect (() => {
             try {
-              Process.spawn_command_line_async ("rocker_launcher");
+              Process.spawn_command_line_async ("rocker");
               //remote_bus.do_show ();
             } catch (Error e) {
               warning (e.message);
