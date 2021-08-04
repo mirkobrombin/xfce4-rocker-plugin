@@ -2,7 +2,7 @@
 
 A Slingshot fork that works on Xfce without gala, granite and plank support.
 
-![](https://git.mirko.pm/brombinmirko/xfce4-rocker-plugin/-/raw/master/screenshot.png)
+![](https://raw.githubusercontent.com/mirkobrombin/xfce4-rocker-plugin/master/screenshot.png)
 
 
 ### Dependencies 
